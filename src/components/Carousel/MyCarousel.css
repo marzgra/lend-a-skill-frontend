@@ -1,0 +1,12 @@
+.carousel-item > img {
+    width: 100%;
+}
+
+.carousel-item .carousel-caption h3 + p {
+    text-align: center !important;
+    text-shadow: 2px 2px 7px #000000;
+}
+
+.carousel-inner {
+    margin-top: 15px;
+}

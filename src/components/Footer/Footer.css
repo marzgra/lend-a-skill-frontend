@@ -1,0 +1,40 @@
+.links > ul {
+    list-style-type: none;
+}
+
+.links {
+    display: table;
+    margin: 0 auto;
+}
+
+.wrapper {
+    background: #3F51B5 repeat-x;
+    margin-top: 25px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    display: inline-block;
+    color: #151540;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+.copyrights {
+    text-align: center;
+    background-color: #324191;
+    padding: 5px;
+    color: #151540;
+}
