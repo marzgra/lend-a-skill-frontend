@@ -94,7 +94,7 @@ export default class MainPage extends React.Component {
 
                 <Row>
                     <Col>
-                        <div className='faq'>
+                        <div id='faq'>
                             <h1>FAQ</h1>
                             <Faq/>
                         </div>
