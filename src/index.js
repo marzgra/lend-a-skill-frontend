@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import NotFound from "./components/notfound/NotFound";
 import MainPage from './pages/MainPage/MainPage';
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import Register from './pages/Register';
 
 

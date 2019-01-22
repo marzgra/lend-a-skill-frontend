@@ -9,7 +9,6 @@
 
 .wrapper {
     background: #3F51B5 repeat-x;
-    margin-top: 25px;
 }
 
 ul {
@@ -37,4 +36,10 @@ li a {
     background-color: #324191;
     padding: 5px;
     color: #151540;
+}
+
+.footer-wrapper {
+    position: absolute;
+    width: 100%;
+    text-align: center;
 }
