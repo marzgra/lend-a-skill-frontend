@@ -39,7 +39,7 @@ li a {
 }
 
 .footer-wrapper {
-    position: absolute;
+    position: fixed;
     width: 100%;
     text-align: center;
 }
