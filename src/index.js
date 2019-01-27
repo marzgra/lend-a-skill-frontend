@@ -8,7 +8,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import NotFound from "./components/notfound/NotFound";
 import MainPage from './pages/MainPage/MainPage';
 import Login from './pages/Login/Login';
-import Register from './pages/Register';
+import Register from './pages/Registration/Register';
 
 
 const App = () => {

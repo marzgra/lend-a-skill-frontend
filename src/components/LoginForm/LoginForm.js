@@ -28,8 +28,6 @@ export default class LoginForm extends React.Component {
     };
 
     handleLogin = () => {
-        console.log(this.state.login);
-        console.log(this.state.password);
         fetch(`${ACCOUNTS_API_URL}/login`, {
             headers: {
                 'Content-Type': 'application/json'
