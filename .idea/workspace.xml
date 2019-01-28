@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad561960-6964-47ca-b173-e2529f1aff6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AccountInfo/AccountInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RegisterForm/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegisterForm/RegisterForm.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/RegisterForm/RegisterForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="189">
+              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -187,7 +185,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548711099637" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548714506209" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/PK/learn-react-by-building-a-web-app/stages/final" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -258,7 +256,7 @@
       <workItem from="1547757000802" duration="4265000" />
       <workItem from="1547921033018" duration="9219000" />
       <workItem from="1547932232727" duration="7097000" />
-      <workItem from="1548013217102" duration="32023000" />
+      <workItem from="1548013217102" duration="35492000" />
     </task>
     <task id="LOCAL-00001" summary="Main page">
       <created>1548015467712</created>
@@ -295,11 +293,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548619504503</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dropdown problems">
+      <created>1548711132313</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548711132313</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52604000" />
+    <option name="totallyTimeSpent" value="56073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -373,7 +378,8 @@
     <MESSAGE value="Login Page - styles&#10;Problem with footer" />
     <MESSAGE value="Login Page - works great" />
     <MESSAGE value="registration works fine" />
-    <option name="LAST_COMMIT_MESSAGE" value="registration works fine" />
+    <MESSAGE value="dropdown problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="dropdown problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -626,10 +632,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-select/dist/react-select.esm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6040">
+          <caret line="4789" column="4" selection-start-line="4789" selection-start-column="4" selection-end-line="4789" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/RegisterForm/RegisterForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        <state relative-caret-position="189">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

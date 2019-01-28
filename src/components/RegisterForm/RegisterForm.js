@@ -41,7 +41,7 @@ export default class RegisterForm extends React.Component {
         })
             .then(handleResponse)
             .then((result) => {
-                this.setState({options: result.map((it) => {return it.name.toString()})});
+                this.setState({options: result});
                 console.log(this.state.options);
             });
     }
