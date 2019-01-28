@@ -7,12 +7,6 @@ import {Redirect} from "react-router-dom";
 import {ACCOUNTS_API_URL} from "../../config";
 import {handleResponse} from "../../Helpers";
 
-const options = [
-    {value: 'chocolate', label: 'Chocolate'},
-    {value: 'strawberry', label: 'Strawberry'},
-    {value: 'vanilla', label: 'Vanilla'}
-];
-
 export default class RegisterForm extends React.Component {
 
     constructor() {
@@ -26,7 +20,8 @@ export default class RegisterForm extends React.Component {
             selectedTeaching: null,
             selectedLearning: null,
             error: '',
-            redirect: false
+            redirect: false,
+            options: [],
         };
     }
 
@@ -36,6 +31,20 @@ export default class RegisterForm extends React.Component {
             return <Redirect to='/myAccount'/>
         }
     };
+
+    componentWillMount() {
+        fetch(`${ACCOUNTS_API_URL}/interests`, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: "GET"
+        })
+            .then(handleResponse)
+            .then((result) => {
+                this.setState({options: result.map((it) => {return it.name.toString()})});
+                console.log(this.state.options);
+            });
+    }
 
     handleSubmit = () => {
         fetch(`${ACCOUNTS_API_URL}/register`, {
@@ -85,7 +94,7 @@ export default class RegisterForm extends React.Component {
     };
 
     render() {
-        const {selectedTeaching, selectedLearning, error} = this.state;
+        const {selectedTeaching, selectedLearning, error, options} = this.state;
         return (
             <div className="registerForm">
                 {error && <UncontrolledAlert color="danger">
