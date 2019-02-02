@@ -41,6 +41,7 @@ export default class LoginForm extends React.Component {
             .then(handleResponse)
             .then((result) => {
                 localStorage.setItem('token', result.token);
+                console.log(result);
                 this.setState({redirect: true});
                 return Promise.resolve(result);
             })
@@ -87,7 +88,7 @@ export default class LoginForm extends React.Component {
                         />
                     </FormGroup>
 
-                    <Button onClick={this.handleLogin}>Zaloguj</Button>
+                    <Button color="primary" onClick={this.handleLogin}>Zaloguj</Button>
                     {this.renderRedirect()}
 
                 </Form>
