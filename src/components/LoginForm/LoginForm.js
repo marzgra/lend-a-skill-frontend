@@ -3,10 +3,10 @@ import {Button, Form, FormGroup, Input, Label, UncontrolledAlert} from 'reactstr
 import './LoginForm.css'
 import {ACCOUNTS_API_URL} from "../../config";
 import {handleResponse} from "../../Helpers";
-import {Redirect} from "react-router-dom";
+import {browserHistory, Redirect, withRouter} from "react-router-dom";
 
 
-export default class LoginForm extends React.Component {
+class LoginForm extends React.Component {
 
     constructor() {
         super();
@@ -59,6 +59,10 @@ export default class LoginForm extends React.Component {
         }
     };
 
+    redirectToResetPass = () => {
+        this.props.history.push('/password')
+    };
+
     render() {
         const {error} = this.state;
         return (
@@ -91,9 +95,12 @@ export default class LoginForm extends React.Component {
                     <Button color="primary" onClick={this.handleLogin}>Zaloguj</Button>
                     {this.renderRedirect()}
 
+                    <Button color="link" onClick={this.redirectToResetPass}>Resetuj hasło</Button>
+
                 </Form>
             </div>
 
         );
     }
 }
+export default withRouter (LoginForm);
