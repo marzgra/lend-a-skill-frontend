@@ -9,11 +9,9 @@ const Register = () => {
         return (
             <Container>
                 <Row>
-                    <Col md="4"> </Col>
-                    <Col sm="12" md="4">
+                    <Col sm="12">
                         <RegisterForm/>
                     </Col>
-                    <Col md="4"> </Col>
                 </Row>
             </Container>
         )

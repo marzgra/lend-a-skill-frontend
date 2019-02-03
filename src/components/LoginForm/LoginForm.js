@@ -1,9 +1,10 @@
 import React from 'react';
-import {Button, Form, FormGroup, Input, Label, UncontrolledAlert} from 'reactstrap';
+import {Button, Form, FormGroup, Input, Label} from 'reactstrap';
 import './LoginForm.css'
 import {ACCOUNTS_API_URL} from "../../config";
 import {handleResponse} from "../../Helpers";
-import {browserHistory, Redirect, withRouter} from "react-router-dom";
+import {Redirect, withRouter} from "react-router-dom";
+import AlertComponent from "../AlertComponent/AlertComponent";
 
 
 class LoginForm extends React.Component {
@@ -46,7 +47,7 @@ class LoginForm extends React.Component {
                 return Promise.resolve(result);
             })
             .catch((error) => {
-                // Show error message, if request fails and set loading to false
+                console.log(error);
                 this.setState({
                     error: error.message,
                 });
@@ -67,9 +68,7 @@ class LoginForm extends React.Component {
         const {error} = this.state;
         return (
             <div className="login-form">
-                {error && <UncontrolledAlert color="danger">
-                    {error}
-                </UncontrolledAlert>}
+                {error && <AlertComponent message={error}/>}
                 <Form>
                     <FormGroup>
                         <Label for="Login">Login</Label>
@@ -103,4 +102,5 @@ class LoginForm extends React.Component {
         );
     }
 }
-export default withRouter (LoginForm);
+
+export default withRouter(LoginForm);

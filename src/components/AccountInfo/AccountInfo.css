@@ -1,0 +1,35 @@
+.account-info {
+    /*width: 100%;*/
+    margin: 20px 20px 0 20px;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, .5);
+    padding: 15px;
+}
+
+.about-me {
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+    margin: 0 20px 20px 20px;
+    padding: 15px;
+}
+.teaching-list {
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+    margin: 0 20px 20px 20px;
+    padding: 15px;
+}
+.learning-list {
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+    margin: 0 20px 20px 20px;
+    padding: 15px;
+}
+
+ul.list li {
+    list-style: disc outside none;
+    display: list-item;
+    margin-left: 2em;
+}
+
+.notification {
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+    margin: 20px;
+    padding: 15px;
+}
+

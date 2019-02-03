@@ -42,7 +42,6 @@ export default class RegisterForm extends React.Component {
             .then(handleResponse)
             .then((result) => {
                 this.setState({options: result});
-                console.log(this.state.options);
             });
     }
 
@@ -86,11 +85,9 @@ export default class RegisterForm extends React.Component {
 
     handleChangeTeaching = (selectedTeaching) => {
         this.setState({selectedTeaching});
-        console.log(`Option selected:`, selectedTeaching);
     };
     handleChangeLearning = (selectedLearning) => {
         this.setState({selectedLearning});
-        console.log(`Option selected:`, selectedLearning);
     };
 
     render() {
