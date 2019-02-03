@@ -1,0 +1,11 @@
+.list-wraper {
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+    margin: 0 20px 20px 20px;
+    padding: 15px;
+}
+
+ul.list li {
+    list-style: disc outside none;
+    display: list-item;
+    margin-left: 2em;
+}

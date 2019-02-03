@@ -11,6 +11,8 @@ import Login from './pages/Login/Login';
 import Register from './pages/Registration/Register';
 import Account from "./pages/Account/Account";
 import PasswordReset from "./pages/PasswordReset/PasswordReset";
+import Messages from "./pages/Messages/MessagesPage";
+import EditAccount from "./pages/EditAccount/EditAccount";
 
 
 const App = () => {
@@ -25,6 +27,8 @@ const App = () => {
                     <Route exact path="/password" component={PasswordReset}/>
                     <Route exact path="/register" component={Register}/>
                     <Route exact path="/myAccount" component={Account}/>
+                    <Route exact path="/messages/:login" component={Messages}/>
+                    <Route exact path="/edit" component={EditAccount}/>
                     <Route component={NotFound}/>
                 </Switch>
 
