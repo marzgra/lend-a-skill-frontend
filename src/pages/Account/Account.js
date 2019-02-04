@@ -9,6 +9,7 @@ const Account = () => {
             <Row>
                 <Col>
                     <AccountInfo/>
+                    <CommentsList/>
                 </Col>
             </Row>
         </Container>
