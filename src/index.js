@@ -13,6 +13,7 @@ import Account from "./pages/Account/Account";
 import PasswordReset from "./pages/PasswordReset/PasswordReset";
 import Messages from "./pages/Messages/MessagesPage";
 import EditAccount from "./pages/EditAccount/EditAccount";
+import Search from "./pages/Search/Search";
 
 
 const App = () => {
@@ -27,8 +28,10 @@ const App = () => {
                     <Route exact path="/password" component={PasswordReset}/>
                     <Route exact path="/register" component={Register}/>
                     <Route exact path="/myAccount" component={Account}/>
+                    <Route exact path="/users/:login" component={Account}/>
                     <Route exact path="/messages/:login" component={Messages}/>
                     <Route exact path="/edit" component={EditAccount}/>
+                    <Route exact path="/search" component={Search}/>
                     <Route component={NotFound}/>
                 </Switch>
 

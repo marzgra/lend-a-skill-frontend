@@ -9,8 +9,8 @@ import {withRouter} from "react-router-dom";
 
 class AccountInfo extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             login: '',
@@ -25,7 +25,7 @@ class AccountInfo extends React.Component {
 
     componentWillMount() {
         console.log(localStorage.getItem('token'));
-        fetch(`${ACCOUNTS_API_URL}/users`, {
+        fetch(`${ACCOUNTS_API_URL}/users/${this.state.login}`, {
             headers: {
                 'Content-Type': 'application/json'
             },

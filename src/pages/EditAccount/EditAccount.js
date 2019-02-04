@@ -106,7 +106,8 @@ export default class EditAccount extends React.Component {
     handleSubmitPassword = () => {
         fetch(`${ACCOUNTS_API_URL}/users/${this.state.login}`, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization' : localStorage.getItem('token')
             },
             method: "PUT",
             body: JSON.stringify({
@@ -220,7 +221,7 @@ export default class EditAccount extends React.Component {
                         </FormGroup>
 
                         <br/>
-                        <Button color="success" onClick={this.handleSubmitPassword}>Zaapisz nowe hasło</Button>
+                        <Button color="success" onClick={this.handleSubmitPassword}>Zapisz nowe hasło</Button>
                         {this.renderRedirect()}
 
                     </Form>
