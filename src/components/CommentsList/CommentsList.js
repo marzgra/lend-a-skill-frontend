@@ -1,14 +1,20 @@
 import React from 'react';
+import {ListGroup, ListGroupItem} from "reactstrap";
+import {handleResponse} from "../../Helpers";
 
 export default class CommentsList extends React.Component{
 
-    constructor(props) {
+    constructor() {
         super();
         this.state = {
             comments: [],
             page: 1,
 
         };
+    }
+
+    componentWillMount() {
+        this.fetchComments();
     }
 
     fetchComments = () => {
@@ -42,10 +48,14 @@ export default class CommentsList extends React.Component{
         const{comments} = this.state;
             return(
                 <ListGroup>
-                    {comments.map((comment) => {
-                        <ListItemGroup>
-
-                    })}
+                    {comments.map(comment =>
+                        <ListGroupItem>
+                            Autor: {comment.authorLogin}<br/>
+                            {comment.comment} <br/>
+                            <StarRateingComponent name="Ocena" value={comment.rate} editing="false"/>
+                            Data: {new Date(comment.timestamp)}
+                        </ListGroupItem>
+                    )}
                 </ListGroup>
             );
         }
