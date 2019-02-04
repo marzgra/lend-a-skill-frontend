@@ -32,9 +32,6 @@ export default class Example extends React.Component {
     };
 
     render() {
-        {
-            console.log(this.state.isLogged)
-        }
         if (this.state.isLogged) {
             return (
                 <Container fluid={true}>
@@ -55,7 +52,7 @@ export default class Example extends React.Component {
                             </Nav>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <NavLink href="/myAccount">Moje konto</NavLink>
+                                    <NavLink href={'/users/' + localStorage.getItem('login')}>Moje konto</NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink href="/edit">Opcje</NavLink>

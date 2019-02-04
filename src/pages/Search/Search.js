@@ -120,7 +120,6 @@ class Search extends React.Component {
                 </Row>
                 <Row>
                     <Col>
-                        {console.log(results)}
                         {showResults && <FoundUsersList users={results}/>}
                     </Col>
                 </Row>

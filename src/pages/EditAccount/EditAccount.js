@@ -49,14 +49,12 @@ export default class EditAccount extends React.Component {
 
         console.log(localStorage.getItem('token'));
         // load actual user information
-        fetch(`${ACCOUNTS_API_URL}/users`, {
+        fetch(`${ACCOUNTS_API_URL}/users/`, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('token')
             },
-            method: "POST",
-            body: JSON.stringify({
-                token: localStorage.getItem('token')
-            })
+            method: "GET"
         })
             .then(handleResponse)
             .then((result) => {

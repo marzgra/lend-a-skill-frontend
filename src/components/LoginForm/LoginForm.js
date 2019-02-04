@@ -3,7 +3,7 @@ import {Button, Form, FormGroup, Input, Label} from 'reactstrap';
 import './LoginForm.css'
 import {ACCOUNTS_API_URL} from "../../config";
 import {handleResponse} from "../../Helpers";
-import {Redirect, withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import AlertComponent from "../AlertComponent/AlertComponent";
 
 
@@ -42,6 +42,7 @@ class LoginForm extends React.Component {
             .then(handleResponse)
             .then((result) => {
                 localStorage.setItem('token', result.token);
+                localStorage.setItem('login', this.state.login);
                 console.log(result);
                 this.setState({redirect: true});
                 return Promise.resolve(result);
@@ -56,7 +57,7 @@ class LoginForm extends React.Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-            return <Redirect to='/myAccount'/>
+            this.props.history.push(`/users/${this.state.login}`);
         }
     };
 

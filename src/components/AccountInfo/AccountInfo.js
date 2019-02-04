@@ -25,14 +25,13 @@ class AccountInfo extends React.Component {
 
     componentWillMount() {
         console.log(localStorage.getItem('token'));
-        fetch(`${ACCOUNTS_API_URL}/users/${this.state.login}`, {
+        const url = this.props.match.params.login === '' ? "" : this.props.match.params.login;
+        fetch(`${ACCOUNTS_API_URL}/users/${url}`, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('token')
             },
-            method: "POST",
-            body: JSON.stringify({
-                token: localStorage.getItem('token')
-            })
+            method: "GET"
         })
             .then(handleResponse)
             .then((result) => {
@@ -60,7 +59,7 @@ class AccountInfo extends React.Component {
         const teachingList = teaching.map((item) => <li className="list" key={item.label}>{item.label}</li>);
         const learningList = learning.map((item) => <li className="list" key={item.label}>{item.label}</li>);
 
-        if (localStorage.getItem('token') !== 'null') {
+        if (localStorage.getItem('token') !== null) {
             return (
                 <Container>
                     <Row>

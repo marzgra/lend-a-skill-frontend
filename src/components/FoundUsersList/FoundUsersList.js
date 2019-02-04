@@ -20,9 +20,9 @@ class FoundUsersList extends React.Component {
     render() {
         const {history} = this.props;
         const {users} = this.props;
-        {
-            console.log(users)
-        }
+
+        console.log(users);
+
 
         return (
             <Table>
