@@ -11,9 +11,7 @@ class CommentsList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: [],
-            page: 1,
-            amount: 50
+            comments: []
         };
     }
 
@@ -29,9 +27,7 @@ class CommentsList extends React.Component {
             },
             method: "POST",
             body: JSON.stringify({
-                login: this.state.login,
-                page: this.state.page,
-                amount: this.state.amount
+                login: this.state.login
             })
         })
             .then(handleResponse)

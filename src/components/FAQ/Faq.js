@@ -9,21 +9,23 @@ export default class Faq extends React.Component {
                     <ListGroupItem>
                         <ListGroupItemHeading>Jakie są opłaty?</ListGroupItemHeading>
                         <ListGroupItemText>
-                            Korzystanie z portalu jest darmowe. Za korepetycje należy .
+                            Korzystanie z portalu jest darmowe. Za korepetycje odbywają się w systemie wymiany
+                            umiejętność za umiejętność.
                         </ListGroupItemText>
                     </ListGroupItem>
                     <ListGroupItem>
-                        <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
+                        <ListGroupItemHeading>Co jeśli nie mam nic do zaoferowania?</ListGroupItemHeading>
                         <ListGroupItemText>
-                            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                            blandit.
+                            Każdy ma coś do zaoferowania - swój wolny czas. Nie musisz uczyć kogoś fizyki kwantowej,
+                            równie dobrze możesz pokazać najlepsze restauracje w mieście. Wszystko zalezy od Ciebie!
                         </ListGroupItemText>
                     </ListGroupItem>
                     <ListGroupItem>
-                        <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
+                        <ListGroupItemHeading>Zapomniałem hasła, co teraz?</ListGroupItemHeading>
                         <ListGroupItemText>
-                            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                            blandit.
+                            W formularzu logowania możesz skozystać z funkcji resetu hasła.
+                            Po wpisaniu adresu email, podanego podczas rejestraji, wyślemy do Ciebie wiadomość
+                            z nowym hasłem. Nie zapomnij od razu go zmienić!
                         </ListGroupItemText>
                     </ListGroupItem>
                 </ListGroup>

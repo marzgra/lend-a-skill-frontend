@@ -3,7 +3,7 @@ import {Card, CardBody, CardImg, CardText, CardTitle} from 'reactstrap';
 import './MyCard.css'
 
 const MyCard = (props) => {
-    const {image, title, text} = props;
+    const {image, title, text, name} = props;
 
     return (
         <div>
@@ -13,6 +13,7 @@ const MyCard = (props) => {
                          alt="Card image cap"/>
                 <CardBody>
                     <CardTitle>{title}</CardTitle>
+                    <CardText>{name}</CardText>
                     <CardText>{text}</CardText>
                 </CardBody>
             </Card>

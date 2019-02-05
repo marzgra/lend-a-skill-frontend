@@ -61,6 +61,9 @@ export default class Example extends React.Component {
                                     <NavLink href="/search">Szukaj</NavLink>
                                 </NavItem>
                                 <NavItem>
+                                    <NavLink href="/messages">Wiadomości</NavLink>
+                                </NavItem>
+                                <NavItem>
                                     <NavLink href="/" onClick={this.logOut}>Wyloguj</NavLink>
                                 </NavItem>
                             </Nav>

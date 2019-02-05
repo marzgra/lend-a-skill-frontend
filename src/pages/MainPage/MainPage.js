@@ -14,18 +14,24 @@ import Faq from "../../components/FAQ/Faq";
 const opinions = [
     {
         image: avatar1,
-        title: 'Wiele się nauczyłem',
-        text: 'Dzięki tej stronie utrwalam swoją wiedzę, wzamian za pomoc innym.'
+        title: 'Wiele się nauczyłam',
+        text: 'Dzięki tej stronie utrwalam swoją wiedzę, wzamian za pomoc innym.',
+        name: 'Kinga Wrzos'
     },
     {
         image: avatar2,
-        title: 'Wiele się nauczyłem',
-        text: 'Dzięki tej stronie utrwalam swoją wiedzę, wzamian za pomoc innym.'
+        title: 'Przyjemne z pożytecznym',
+        text: 'Ktoś mądry kiedyś powiedział, że najepszm sposobem nauki jest uczenie innych. ' +
+            'Zgodnie z tą tezą, Lend A Skill to świetne miejsce do nauki.',
+        name: 'Kuba Jarosz'
     },
     {
         image: avatar3,
-        title: 'Wiele się nauczyłem',
-        text: 'Dzięki tej stronie utrwalam swoją wiedzę, wzamian za pomoc innym.'
+        title: 'Poznaję ludzi pełnych pasji',
+        text: 'Zawsze chciałem nauczyć się programować. Dzięki Lend A Skill znalazłem wspaniałych ludzi' +
+            'chętnych dzielić sie swoimi zainteresowaniami. A to wszystko w zamian ' +
+            'za kilka moich lekcji hiszpańskiego!',
+        name: 'Krzysiek Kowalski'
     },
 
 ];
@@ -43,17 +49,13 @@ const MainPage = () => {
                 <Col>
                     <div className='site-description'>
                         <h1>Opis</h1>
-                        <p>Bacon ipsum dolor amet tenderloin t-bone ribeye pancetta, pork chop shank ham capicola
-                            brisket pig kevin chuck pork belly. Biltong ham hock tail alcatra kielbasa tongue,
-                            meatball
-                            short loin pork loin jowl capicola meatloaf brisket. Shoulder kielbasa picanha, bacon
-                            buffalo frankfurter jowl swine bresaola fatback. Boudin capicola chuck beef jerky filet
-                            mignon. Kielbasa kevin tri-tip tongue sausage, pork chop pig fatback biltong andouille.
-                            Beef
-                            ribs cupim burgdoggen meatball pastrami, ball tip filet mignon. Boudin burgdoggen ham,
-                            pork
-                            tri-tip beef ribs fatback landjaeger bacon chuck sausage meatball strip steak kielbasa
-                            doner.</p>
+                        <p>Lend a skill to wyjątkowe miejśce, gdzie na pewno znajdziesz osobę chętną do
+                            wspólnej nauki. Założenie konta jest bezpłatne, a zdobyta wiedza, bezcenna!
+                        </p>
+                        <p>
+                            Głównym celem platformy jest wymiana wiedzy, udzielane korepetycje są
+                            bazpłatne, jedyne co jest wymagane, to żebyć nauczył korepetytora czegoś w zamian!
+                        </p>
                     </div>
                 </Col>
 
@@ -71,16 +73,19 @@ const MainPage = () => {
                 <Col sm="4"><MyCard
                     image={opinions[0].image}
                     title={opinions[0].title}
+                    name={opinions[0].name}
                     text={opinions[0].text}
                 /></Col>
                 <Col sm="4"><MyCard
                     image={opinions[1].image}
                     title={opinions[1].title}
+                    name={opinions[1].name}
                     text={opinions[1].text}
                 /></Col>
                 <Col sm="4"><MyCard
                     image={opinions[2].image}
                     title={opinions[2].title}
+                    name={opinions[2].name}
                     text={opinions[2].text}
                 /></Col>
             </Row>

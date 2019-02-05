@@ -3,7 +3,6 @@ import React from 'react';
 import './RegisterForm.css';
 import {Button, Form, FormGroup, Input, Label, UncontrolledAlert} from "reactstrap";
 import Select from "react-select";
-import {Redirect} from "react-router-dom";
 import {ACCOUNTS_API_URL} from "../../config";
 import {handleResponse} from "../../Helpers";
 
@@ -28,7 +27,7 @@ export default class RegisterForm extends React.Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-            return <Redirect to='/myAccount'/>
+            this.props.history.push(`/users/${this.state.login}`)
         }
     };
 
@@ -65,6 +64,7 @@ export default class RegisterForm extends React.Component {
             .then(handleResponse)
             .then((result) => {
                 localStorage.setItem('token', result.token);
+                localStorage.setItem('login', this.state.login);
                 this.setState({redirect: true});
                 return Promise.resolve(result);
             })

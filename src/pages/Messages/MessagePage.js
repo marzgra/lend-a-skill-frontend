@@ -4,16 +4,18 @@ import {Col, Row} from "reactstrap";
 import ConversationsList from "../../components/ConversationsList/ConversationsList";
 import MessageWindow from "../../components/MessageWindow/MessageWindow";
 
-const MessagePage = () => {
+const MessagePage = (props) => {
+    const{login} = props;
 
     return(
         <Container>
             <Row>
-                <Col>
+                <Col md="4">
+                    <h5>Twoje rozmowy</h5>
                     <ConversationsList/>
                 </Col>
                 <Col>
-                    <MessageWindow/>
+                    <MessageWindow login={login}/>
                 </Col>
             </Row>
         </Container>

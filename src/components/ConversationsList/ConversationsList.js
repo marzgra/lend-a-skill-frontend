@@ -1,6 +1,8 @@
 import React from 'react';
 import {handleResponse} from "../../Helpers";
 import {MESSAGES_API_URL} from "../../config";
+import {ListGroup} from "reactstrap";
+import ListGroupItem from "reactstrap/es/ListGroupItem";
 
 export default class ConversationsList extends React.Component {
 
@@ -22,8 +24,9 @@ export default class ConversationsList extends React.Component {
         })
             .then(handleResponse)
             .then((result) => {
-                console.log(result);
-                this.setState({login: result.conversations});
+                console.log(result)
+                this.setState({conversations: result.convs});
+                console.log(this.state.conversations)
             })
             .catch((error) => {
                 console.log(error);
@@ -32,9 +35,16 @@ export default class ConversationsList extends React.Component {
     }
 
     render(){
+        const {conversations} = this.state;
         return(
             <div>
-                <h5>Conversations list</h5>
+                <ListGroup>
+                    {conversations.map(conv =>
+                        <ListGroupItem tag="a" href={'/messages/' + conv}>
+                            {conv}
+                        </ListGroupItem>
+                    )}
+                </ListGroup>
             </div>
         );
     }

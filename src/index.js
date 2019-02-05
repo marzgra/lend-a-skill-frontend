@@ -29,6 +29,7 @@ const App = () => {
                     <Route exact path="/register" component={Register}/>
                     <Route exact path="/users/:login" component={Account}/>
                     <Route exact path="/messages/:login" component={MessagePage}/>
+                    <Route exact path="/messages" component={MessagePage}/>
                     <Route exact path="/edit" component={EditAccount}/>
                     <Route exact path="/search" component={Search}/>
                     <Route component={NotFound}/>
